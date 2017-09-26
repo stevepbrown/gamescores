@@ -17,7 +17,8 @@ class Scores extends Migration
             $table->increments('id');
             $table->integer('user_id')->unique;
             $table->integer('score');
-            $table->boolval('moderated');
+            $table->string('difficulty');
+            $table->boolean('moderated');
 
         });
     }

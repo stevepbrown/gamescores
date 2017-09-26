@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Scores
+ *
+ */
+
+/*
+Route::get($uri, $callback);
+Route::post($uri, $callback);
+Route::put($uri, $callback);
+Route::patch($uri, $callback);
+Route::delete($uri, $callback);
+ */
+
+
+Route::get('/', 'ScoresController@index');
+Route::post('/', 'ScoresController@create');
