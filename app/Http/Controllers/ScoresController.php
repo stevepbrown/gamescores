@@ -19,6 +19,7 @@ class ScoresController extends Controller
 
     $scores = \App\models\Score::with('user')->get();
 
+  
     return view('pages.index',array('scores'=>$scores));
   }
 

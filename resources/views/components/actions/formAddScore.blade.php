@@ -1,4 +1,4 @@
-{!! Form::open(['method' => 'POST', 'route' => 'routeName', 'class' => 'form-horizontal']) !!}
+{!! Form::open(['method' => 'POST', 'route' => 'scores', 'class' => 'form-horizontal']) !!}
 
 
     <div class="btn-group pull-right">

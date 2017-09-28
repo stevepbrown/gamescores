@@ -7,13 +7,6 @@
     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 @endsection
 
-@section('filters')
-{{-- @include('components.filters.scoreFilter') --}}
-
-<p>Area to hold filters (under construction)</p>
-
-@endsection
-
 
 @section('content')
 
@@ -39,7 +32,11 @@
 @endsection
 
 @section('actions')
-  @include('components.actions.formAddScore')
+
+
+<p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p>
+
+  {{-- @include('components.actions.formAddScore') --}}
 
 
   {{-- <form method="POST" action="#" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -56,5 +53,10 @@
   </form> --}}
 
 
+
+@endsection
+@section('filters')
+
+  <p class="alert alert-warning">Calls a component which renders a filter / sort form, <strong>UNDER CONSTRUCTION</strong></p>
 
 @endsection
