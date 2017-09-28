@@ -43,7 +43,7 @@
 
     </select> </br>
     <label for="score">Score</label><input type="number" name="score">
-    <input type="submit"/>
+    <input type="submit" value="Add score">
   </form>
 
 @endsection

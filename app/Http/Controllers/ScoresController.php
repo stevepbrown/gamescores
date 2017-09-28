@@ -24,17 +24,32 @@ class ScoresController extends Controller
   /**
   * Show the form for creating a new resource.
   *
-  * @return \Illuminate\Http\Response
+  * @return view
   */
   public function create()
   {
+
+/*
+ TODO Currently throwing a SQL error, need to debug!
+
+ */
+
+// Save the username
+$user = new new \App\models\User;
+
+
+
     $scores = \App\models\Score::with('user')->get();
+
+
 $users = \App\models\User::all();
 
     $user = new \App\models\User;
     $score = new \App\models\Score;
 
     $user->name= $_REQUEST['player'];
+
+    // Save the player's name
 
 
         // Obtain ID of new user
@@ -43,13 +58,14 @@ $sorted_users = $users->sortByDesc('id');
 
     $top_user = $sorted_users->take(1);
 
+
     $id=  $top_user->pluck('id');
 
-    // $score->score = $_REQUEST['score'];
-    // $score->difficulty = $_REQUEST['difficulty'];
-    // $score->user_id=  $id;
-    // $score->moderated= false;
-    // $score->save();
+    $score->score = $_REQUEST['score'];
+    $score->difficulty = $_REQUEST['difficulty'];
+    $score->user_id=  $id;
+    $score->moderated= false;
+    $score->save();
 
 
     return view('pages.index',array('scores'=>$scores));
