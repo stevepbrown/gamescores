@@ -8,32 +8,41 @@
 @endsection
 
 @section('filters')
-<p>Some filters</p>
+{{-- @include('components.filters.scoreFilter') --}}
+
+<p>Area to hold filters (under construction)</p>
+
 @endsection
 
 
 @section('content')
 
   <h1 class="text-center">High Scores</h1>
-<table>
+<table class="table table-striped table-bordered text-left">
     <tr>
-    <td><h2>Name</h2></td>
-    <td><h2>Difficulty</h2></td>
-    <td><h2>Score</h2></td>
+    <th>Position</th>
+    <th>Name</th>
+    <th>Difficulty</th>
+    <th>Score</th>
   </tr>
 
 @foreach ($scores as $score)
 <tr>
-  <td>{{$score->user->name}}</td>
-  <td>{{$score->difficulty}}</td>
-  <td>{{$score->score}}</td>
+  <th></th>
+  <th>{{$score->user->name}}</th>
+  <th>{{$score->difficulty}}</th>
+  <th>{{$score->score}}</th>
+</span>
 </tr>
 @endforeach
 </table>
 @endsection
 
 @section('actions')
-  <form method="POST" action="#" accept-charset="UTF-8" enctype="multipart/form-data">
+  @include('components.actions.formAddScore')
+
+
+  {{-- <form method="POST" action="#" accept-charset="UTF-8" enctype="multipart/form-data">
      {{ csrf_field() }}
     <label for="player">Player name</label><input type="text" name="player"/></br>
     <label for="difficulty">Difficulty</label> <select id="difficulty" name="difficulty">
@@ -44,6 +53,8 @@
     </select> </br>
     <label for="score">Score</label><input type="number" name="score">
     <input type="submit" value="Add score">
-  </form>
+  </form> --}}
+
+
 
 @endsection
