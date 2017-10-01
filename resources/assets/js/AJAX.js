@@ -15,12 +15,28 @@ $('#select-filter').change(function () {
 
   alert('Filter condition change!');
 
+  // Get the value of parent
+  var $parentVal = empty ;
+
+  // conditional to show hide either difficulty or name dropdown
+case $('#select-filter').change(function () {
+
+  alert('Filter condition change!');
+
+
+  }):
+
+
 
   })
 
   $('#select-sort').change(function () {
 
     alert('Sort condition change!');
+
+    var $parentVal = empty ;
+
+
 
     })
     // The URI for the AJAX request

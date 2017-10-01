@@ -76,36 +76,7 @@ module.exports = __webpack_require__(42);
 /***/ 42:
 /***/ (function(module, exports) {
 
-
-/**
- *  File:sortFilter.js
- *
- * Author: Steve Brown
- */
-
-$(document).ready(function () {
-
-  // Event handlers
-
-  $('#select-filter').change(function () {
-
-    alert('Filter condition change!');
-  });
-
-  $('#select-sort').change(function () {
-
-    alert('Sort condition change!');
-  });
-  // The URI for the AJAX request
-  //var $request;
-
-
-  // check the filterBy parameter to see if it is defined
-  // check the sortBy parameter to see if it is defined
-
-  // assemble the requested route on the basis of the parameters passed
-
-});
+throw new Error("Module build failed: SyntaxError: Unexpected token (22:0)\n\n\u001b[0m \u001b[90m 20 | \u001b[39m\n \u001b[90m 21 | \u001b[39m  \u001b[90m// conditional to show hide either difficulty or name dropdown\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 | \u001b[39m\u001b[36mcase\u001b[39m $(\u001b[32m'#select-filter'\u001b[39m)\u001b[33m.\u001b[39mchange(\u001b[36mfunction\u001b[39m () {\n \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 | \u001b[39m\n \u001b[90m 24 | \u001b[39m  alert(\u001b[32m'Filter condition change!'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 | \u001b[39m\u001b[0m\n");
 
 /***/ })
 
