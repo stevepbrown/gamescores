@@ -8,7 +8,8 @@
 @endsection
 @section('filters')
   <div id="filters" class="col-sm-2">
-    <p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p>
+    @include('components.forms.formFilterScore')
+    {{-- TODO - Remove when ready <p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p> --}}
   </div>
 @endsection
 @section('content')
@@ -17,7 +18,7 @@
   </div>
 @endsection
 @section('actions')
-  <div id="content" class="col-sm-2">
+  <div id="actions" class="col-sm-2">
     <p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p>
   </div>
 @endsection

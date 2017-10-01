@@ -20,4 +20,5 @@ Route::get('/', function () {
  * Scores
  *
  */
-Route::resource('scores', 'ScoresController');
+Route::get('/', 'ScoresController@index');
+Route::post('/{filterBy}/{sortBy}','ScoresController@processSortFilter($filterBy,$sortBy)');

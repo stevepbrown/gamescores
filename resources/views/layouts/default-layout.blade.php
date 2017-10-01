@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/bs-template.css">
   {{-- <link rel="icon" href="https://www.soapmedia.co.uk/wp-content/themes/soap-base/favicon.ico" /><link> --}}
+   <script src="js/app.js" type="text/javascript"></script>
    <script src="js/AJAX.js" type="text/javascript"></script>
   <title>
     @yield('title')

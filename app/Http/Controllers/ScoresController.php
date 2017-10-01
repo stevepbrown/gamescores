@@ -9,18 +9,14 @@ class ScoresController extends Controller
   /**
   * Display a listing of the resource.
   *
-  * @return \Illuminate\Http\Response
   */
 
   public function index()
 
   {
 
+    return view('pages.index');
 
-    $scores = \App\models\Score::with('user')->get();
-
-  
-    return view('pages.index',array('scores'=>$scores));
   }
 
   /**
@@ -87,5 +83,13 @@ class ScoresController extends Controller
   public function destroy($id)
   {
     //
+  }
+
+  public function processSortFilter($filterBy, $sortBy){
+
+    //TODO - Process filter / sort according to chosen options
+
+    dd('Method hit!');
+
   }
 }
