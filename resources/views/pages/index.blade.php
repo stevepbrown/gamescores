@@ -28,13 +28,3 @@
 {{-- @section('content')
 <
 @endsection --}}
-
-
-@section('script')
-
-  $(document).ready(function(){
-
-    $("#content").load("demo_test.txt");
-
-  };
-@endsection

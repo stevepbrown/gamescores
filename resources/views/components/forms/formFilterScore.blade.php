@@ -10,13 +10,11 @@
         <option value="difficulty">Difficulty</option>
       </select>
       <select id="select-filter-difficulty" class="hidden">
-        <option value="">Not Selected</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="advanced">Advanced</option>
       </select>
       <select id="select-filter-name" class="hidden">
-        <option value="">Not Selected</option>
         <option value='Aida Champlin'>Aida Champlin</option>
         <option value='Brant Lynch'>Brant Lynch</option>
         <option value='Camryn Franecki'>Camryn Franecki</option>
@@ -33,7 +31,7 @@
       </select>
     </div>
     <div class="form-group text-center">
-      <button type="submit" class="btn btn-default">Apply</button>
+      <input id="btn-filter" type="button" class="btn btn-default" value="Apply"/>
     </div>
 </form>
 </div>

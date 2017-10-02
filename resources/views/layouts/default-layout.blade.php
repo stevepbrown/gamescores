@@ -37,8 +37,5 @@
   <footer class="container-fluid text-center">
     <p>&copy; Steve Brown 2017</p>
   </footer>
-  <script type="text/javascript">
-  @yield('scripts')
-  </script>
 </body>
 </html>
