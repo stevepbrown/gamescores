@@ -53,6 +53,11 @@ $(document).ready(function() {
     };
   };
 
+/**
+ * Returns an object representing the active filter
+ * @method getActiveFilter
+ * @return [object] [active filter object]
+ */
 function getActiveFilter(){
 
   var $activeFilter = new Object();
@@ -71,11 +76,37 @@ function getActiveFilter(){
     $activeFilter.filterSelection = ($('#select-filter-difficulty').val());
   }
 
-  alert($activeFilter.filterType + $activeFilter.filterSelection);
+  return $activeFilter;
+
+};
+
+/**
+ * Returns sort selection
+ * @method getSortBy
+ * @return value $sortSelected
+ */
+function getSortBy(){
+
+  $sortSelected = $('#select-sort').val();
+  return $sortSelected;
 
 };
 
 function loadData(){
+
+/*
+declare the component parts of the request
+by interpolation of template literal
+ */
+
+var $filters = getActiveFilter();
+var $filterType = $activeFilter.filterType;
+var $filterSelection = $activeFilter.filterSelection;
+var $sortBy =
+
+// the interpolated string
+var $ajaxRoutePath = `/ajax/${$filterType}/${$filterSelection}/`
+
 
   alert('You will have loaded some data!');
 };
