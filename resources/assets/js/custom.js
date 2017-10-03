@@ -11,9 +11,7 @@ $(document).ready(function() {
  * @return void
  */
   $('#select-filter').change(function() {
-
     showHideFilter(($('#select-filter').val()));
-
   });
   /**
    * Event handler for apply button
@@ -67,16 +65,17 @@ function getActiveFilter(){
   $activeFilter.filterSelection = 'none';
 
   if (($('#select-filter').val) === 'name'){
+
+    alert('Filter:name');
     $activeFilter.filterType = 'name';
     $activeFilter.filterSelection = ($('#select-filter-name').val());
   }
 
   else if (($('#select-filter').val) === 'difficulty'){
+    alert('Filter:difficulty');
     $activeFilter.filterType = 'difficulty';
     $activeFilter.filterSelection = ($('#select-filter-difficulty').val());
   }
-
-  return $activeFilter;
 
 };
 
@@ -100,15 +99,15 @@ by interpolation of template literal
  */
 
 var $filters = getActiveFilter();
-var $filterType = $activeFilter.filterType;
-var $filterSelection = $activeFilter.filterSelection;
-var $sortBy =
-
-// the interpolated string
-var $ajaxRoutePath = `/ajax/${$filterType}/${$filterSelection}/`
+var $filterType = $filters.filterType;
+var $filterSelection = $filters.filterSelection;
+var $sortBy = getSortBy();
 
 
-  alert('You will have loaded some data!');
+// // the interpolated string
+// //FIXME var $ajaxRoutePath = `/ajax/${$filterType}/${$filterSelection}/`
+
 };
 
-});
+
+})

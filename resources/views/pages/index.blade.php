@@ -22,9 +22,3 @@
     <p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p>
   </div>
 @endsection
-
-
-{{-- //TODO content will be rendered programatically --}}
-{{-- @section('content')
-<
-@endsection --}}
