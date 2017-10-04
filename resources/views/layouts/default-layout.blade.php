@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/bs-template.css">
   {{-- <link rel="icon" href="https://www.soapmedia.co.uk/wp-content/themes/soap-base/favicon.ico" /><link> --}}
-   <script src="js/app.js" type="text/javascript"></script>
-   <script src="js/custom.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/custom.js" type="text/javascript"></script>
   <title>
     @yield('title')
   </title>

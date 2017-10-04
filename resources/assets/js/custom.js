@@ -64,19 +64,16 @@ function getActiveFilter(){
   $activeFilter.filterType = 'none';
   $activeFilter.filterSelection = 'none';
 
-  if (($('#select-filter').val) === 'name'){
-
-    alert('Filter:name');
+  if (($('#select-filter').val()) === 'name'){
     $activeFilter.filterType = 'name';
     $activeFilter.filterSelection = ($('#select-filter-name').val());
   }
 
-  else if (($('#select-filter').val) === 'difficulty'){
-    alert('Filter:difficulty');
+  else if (($('#select-filter').val()) === 'difficulty'){
     $activeFilter.filterType = 'difficulty';
     $activeFilter.filterSelection = ($('#select-filter-difficulty').val());
   }
-
+  return $activeFilter;
 };
 
 /**
@@ -98,14 +95,25 @@ declare the component parts of the request
 by interpolation of template literal
  */
 
+// Ensure that the X-CSRF-TOKEN token is sent alongside any AJAX request
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 var $filters = getActiveFilter();
 var $filterType = $filters.filterType;
 var $filterSelection = $filters.filterSelection;
 var $sortBy = getSortBy();
 
-
-// // the interpolated string
-// //FIXME var $ajaxRoutePath = `/ajax/${$filterType}/${$filterSelection}/`
+jQuery.post( '/ajax/getscores/',
+  {filterType:$filters.filterType,
+    filterSelection:$filters.filterSelection,
+    sortBy:$sortBy},
+    function(result){
+           $("#content").html(result);
+       }),'http';
 
 };
 

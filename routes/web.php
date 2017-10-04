@@ -12,13 +12,10 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /**
  * Scores
  *
  */
 Route::get('/', 'ScoresController@index');
-Route::post('/{filterBy}/{sortBy}','ScoresController@processSortFilter($filterBy,$sortBy)');
+
+Route::post('/ajax/getscores/','ScoresController@processScoresRequest');
