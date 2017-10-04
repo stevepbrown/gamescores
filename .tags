@@ -1,0 +1,4 @@
+ScoresController	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^class ScoresController extends Controller$/;"	class	line:7
+index	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^  public function index()$/;"	function	line:14
+processScoresRequest	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^  public function processScoresRequest(Request $request){$/;"	function	line:23
+data	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^    $data = $request->all(); \/\/ This will get all the request data.$/;"	variable	line:25

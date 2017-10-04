@@ -14,7 +14,7 @@
 @endsection
 @section('content')
   <div id="content" class="col-sm-8">
-    <p class="alert alert-danger text-center"><strong>Error:</strong> AJAX call failed!</p>
+    <p class="alert alert-info">Click apply to test AJAX</p>
   </div>
 @endsection
 @section('actions')

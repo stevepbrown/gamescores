@@ -24,6 +24,7 @@ class ScoresController extends Controller
 
     $data = $request->all(); // This will get all the request data.
 
-    dd($data);
+    return '<p style="font-size:25px;font-color:green" class="alert alert-success">AJAX call has succeeded, server data available!</p>';
+
   }
 }
