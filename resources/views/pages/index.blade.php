@@ -9,7 +9,6 @@
 @section('filters')
   <div id="filters" class="col-sm-2">
     @include('components.forms.formFilterScore')
-    {{-- TODO - Remove when ready <p class="alert alert-warning">Calls a component which renders an action [addScore] form, <strong>UNDER CONSTRUCTION</strong></p> --}}
   </div>
 @endsection
 @section('content')

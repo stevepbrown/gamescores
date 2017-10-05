@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use \App\models;
-
 
 class ScoresController extends Controller
 {
@@ -13,40 +13,42 @@ class ScoresController extends Controller
   */
 
   public function index()
-
   {
-
     return view('pages.index');
-
   }
 
 
-  public function processScoresRequest(Request $request){
-
+  public function processScoresRequest(Request $request)
+  {
     $data = $request->all(); // This will get all the request data.
 
-//TODO - Remove this example $users = App\User::where('active', 1)->get();
-  //  $scores = models\Score::where('Score->user->name', $data['filterSelection'])->get();
-$scores = models\Score::with('user')->get();
+    // get all the scores
+    $scores = models\Score::with('user')->get();
 
-dd($score);
+    // determine filter type & apply the filter
+    if ($data->filterType === 'none'){
+
+      //no filter
+      $filteredScores = $scores}
+
+      else {// filter according to the filter type / selected filter
+
+        switch ($data->filterType) {
+          case 'difficulty':
+            $filteredScores = $scores->where('difficulty', $data->filterSelection);
+            break;
+
+            case 'name':
+            $filteredScores = $scores->where('scores->user->name', $data->filterSelection);
+            break;
+          }
+        }
+
+      }
 
 
-// TODO dd($scores->user()->where('name', 'Estevan Johns')->get());
 
 
-    // switch($data->filterType){
-    //
-    //   case 'name':
-    //   $scores = Score::where('score->user->name', $filterSelection)->get();
-    //   case 'difficulty':
-    //     $scores = Score::where('score->difficulty', $filterSelection)->get();
-    //     default:
-    //     $scores = Score::all()-get();
-    //
-    //   }
-
-      return $scores;
+      return view('components.AJAX.scoretable')->with(['scores' => $scores]);
     }
-    //TODO Remove this $scores = App\Score::where('active', 1)->get();
   }

@@ -6,6 +6,9 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ScoresController	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^class ScoresController extends Controller$/;"	class	line:8
 index	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^  public function index()$/;"	function	line:15
-processScoresRequest	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^  public function processScoresRequest(Request $request){$/;"	function	line:24
-data	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^    $data = $request->all(); \/\/ This will get all the request data.$/;"	variable	line:26
-scores	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^$scores = models\\Score::with('user')->get();$/;"	variable	line:30
+processScoresRequest	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^  public function processScoresRequest(Request $request)$/;"	function	line:21
+data	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^    $data = $request->all(); \/\/ This will get all the request data.$/;"	variable	line:23
+scores	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^    $scores = models\\Score::with('user')->get();$/;"	variable	line:26
+filteredScores	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^      $filteredScores = $scores}$/;"	variable	line:32
+filteredScores	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^            $filteredScores = $scores->where('difficulty', $data->filterSelection);$/;"	variable	line:38
+filteredScores	/var/www/html/gamescores/app/Http/Controllers/ScoresController.php	/^            $filteredScores = $scores->where('scores->user->name', $data->filterSelection);$/;"	variable	line:42
