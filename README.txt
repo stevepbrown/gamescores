@@ -1,7 +1,4 @@
 
-"I have not failed, I have found 10,000 ways that will not work" -Edison
-
-
 Hello, and thanks for stopping-by! This project is subject to ongoing development. The early code has a few errors & omissions.
 
 (1) The form post to add a new score does not have functional code behind it. I had made a start coding this, but remarked it out in favour of getting a screen that rendered something, as opposed to an error screen! Basically I need to create a new instance of user & score, and populate the attributes with the request data, before calling the save method. It would be good to do this in a transactional way, as a user_id is required in order to enter a FK in the score table. In order to obtain this ID (whose PK field is auto-increment), I can either get the Max(+1) of the existing IDs in the user table, or actually do the save against the user table and return the inserted ID. This can then be used to populate the FK in scores.
@@ -16,6 +13,7 @@ This exercise will provide an opportunity to deepen my knowledge still-further, 
 
 
 
+"I have not failed, I have found 10,000 ways that will not work" -Edison
 
 
 
